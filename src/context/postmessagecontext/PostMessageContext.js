@@ -3,7 +3,7 @@ import { createContext } from "react";
 import PostMessage from "./PostMessageReducer";
 
 const initialState = {
-  textMessage: "",
+  textMessage: {"text":""},
   isFetching: false,
   error: false,
 };

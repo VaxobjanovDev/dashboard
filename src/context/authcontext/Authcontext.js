@@ -3,11 +3,11 @@ import { createContext } from "react";
 import AuthReducer from "./AuthReducer";
 
 const initialState = {
-  token:JSON.parse(localStorage.getItem("token")) ||null,
+  token:JSON.parse(localStorage.getItem("token")) || null,
   isFetching: false,
   error: false,
 };
-
+// console.log(JSON.parse(JSON.stringify(localStorage.getItem("token"))))
 export const AuthContext = createContext(initialState);
 
 export const AuthContextProvider = ({ children }) => {

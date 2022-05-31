@@ -7,7 +7,7 @@ import "./Center.css";
 const Center = ({ data }) => {
   const { name,desc } = data.item || "";
 
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState({"text":""});
 
   const { dispatch } = useContext(PostMessageContext);
 
@@ -15,8 +15,6 @@ const Center = ({ data }) => {
     e.preventDefault()
     postMessage(dispatch, message);
   };
-
-  console.log(JSON.parse(localStorage.getItem("token")).payload.token);
 
   return (
     <div className="center">
@@ -173,7 +171,7 @@ const Center = ({ data }) => {
                 </div>
             </div>
             <div className="writing-bar">
-                  <input type="text" onChange={(e) => setMessage(e.target.value)} />
+                  <input type="text" onChange={(e) => setMessage({name:e.target.value})} />
                   <RiSendPlane2Line className="plane" onClick={(e)=>handleClick(e)} />
             </div>
         </div>

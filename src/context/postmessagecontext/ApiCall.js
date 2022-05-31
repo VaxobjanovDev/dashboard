@@ -1,7 +1,6 @@
 import axios from "axios";
 import {postMessageStart,postMessageSucces,postMessageFailure} from'./PostMessageAction'
 
-
 export const postMessage = async (dispatch, textMessage) => {
   dispatch(postMessageStart());
   try {
